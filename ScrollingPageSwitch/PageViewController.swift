@@ -67,7 +67,7 @@ class PageViewController: UIPageViewController {
     
     func makeViewControllerForScrollingMode() -> UIViewController {
         let clonedTexts = texts
-        let joinedText = clonedTexts.joined()
+        let joinedText = clonedTexts.joined(separator: "\n\n") // PR
         let viewController = makeSinglePageViewController(withText: joinedText)
         let page = 1
         viewController.view.tag = page
